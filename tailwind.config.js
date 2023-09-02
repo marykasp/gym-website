@@ -30,6 +30,7 @@ export default {
         abstractwaves: "url('./assets/AbstractWaves.png')",
         sparkles: "url('./assets/Sparkles.png')",
         circles: "url('./assets/Circles.png')",
+        lotusflower: "url('./assets/large-lotus-flower.png')",
       },
     },
     screens: {
