@@ -1,5 +1,11 @@
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { BenefitType, SelectedPage } from '../../shared/types';
+import { motion } from 'framer-motion';
+
+const childVariant = {
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: { opacity: 1, scale: 1 },
+};
 
 type Props = {
   benefit: BenefitType;
@@ -8,8 +14,9 @@ type Props = {
 
 const BenefitCard = ({ benefit, setSelectedPage }: Props) => {
   return (
-    <div
+    <motion.div
       className={`mt-5 rounded-md border-2 border-gray-100 ${benefit.color} px-5 py-16 text-center`}
+      variants={childVariant}
     >
       <div className="mb-4 flex justify-center">
         <div className="p-4 rounded-full border-2 border-gray-100 bg-gray-100">
@@ -26,7 +33,7 @@ const BenefitCard = ({ benefit, setSelectedPage }: Props) => {
       >
         <p>Learn More</p>
       </AnchorLink>
-    </div>
+    </motion.div>
   );
 };
 

@@ -32,6 +32,14 @@ const benefits: Array<BenefitType> = [
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus hic quidem sint, delectus consequatur repellendus.',
   },
 ];
+
+const container = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.2 },
+  },
+};
+
 type Props = {
   setSelectedPage: (page: SelectedPage) => void;
 };
@@ -46,7 +54,17 @@ const Benefits = ({ setSelectedPage }: Props) => {
         onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}
       >
         {/* Section Headers */}
-        <div className="md:my-5 flex flex-col items-center">
+        <motion.div
+          className="md:my-5 flex flex-col items-center"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, x: -100 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
           <SectionHeader>MORE THAN JUST A GYM.</SectionHeader>
           <p className="my-5 text-lg md:text-normal md:w-3/5">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
@@ -54,9 +72,15 @@ const Benefits = ({ setSelectedPage }: Props) => {
             enim sed rerum dolore commodi numquam necessitatibus. Cupiditate
             recusandae aut corrupti labore laborum?
           </p>
-        </div>
+        </motion.div>
         {/* Benefits Grid */}
-        <div className="md:flex items-center justify-between gap-8 mt-5">
+        <motion.div
+          className="md:flex items-center justify-between gap-8 mt-5"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          variants={container}
+        >
           {/* Benefit Cards */}
           {benefits.map((benefit, index) => {
             return (
@@ -67,7 +91,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
               />
             );
           })}
-        </div>
+        </motion.div>
       </motion.div>
     </section>
   );
