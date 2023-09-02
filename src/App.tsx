@@ -1,5 +1,6 @@
 import Navbar from '@/components/navbar';
 import Home from '@/components/home';
+import Benefits from '@/components/benefits';
 import { useEffect, useState } from 'react';
 import { SelectedPage } from '@/shared/types';
 
@@ -25,13 +26,14 @@ const App = () => {
   }, []);
 
   return (
-    <div className="app bg-primary-100">
+    <div className="app bg-primary-50">
       <Navbar
         isTopOfPage={isTopOfPage}
         setSelectedPage={setSelectedPage}
         selectedPage={selectedPage}
       />
       <Home setSelectedPage={setSelectedPage} />
+      <Benefits setSelectedPage={setSelectedPage} />
     </div>
   );
 };

@@ -5,6 +5,7 @@ import Link from './Link';
 import { SelectedPage } from '@/shared/types';
 import useMediaQuery from '../../hooks/useMediaQuery';
 import ActionButton from '../ActionButton';
+import LotusFlower from '@/assets/lotus-flower.png';
 
 type Props = {
   isTopOfPage: boolean;
@@ -75,6 +76,13 @@ const Navbar = ({ selectedPage, setSelectedPage, isTopOfPage }: Props) => {
             </button>
           </div>
           <div className="ml-[33%] flex flex-col gap-10 text-2xl">
+            <div className="inline-flex">
+              <img
+                src={LotusFlower}
+                alt="lotus flower"
+                className="w-[50px] h-[50px] text-center"
+              />
+            </div>
             {navigation.map((nav, index) => {
               return (
                 <Link

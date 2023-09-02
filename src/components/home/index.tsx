@@ -18,10 +18,13 @@ const Home = ({ setSelectedPage }: Props) => {
   return (
     <section
       id="home"
-      className="gap-16 bg-primary-100 py-12 md:h-full md:pb-0"
+      className="gap-16 py-12 md:h-full md:pb-0"
     >
       {/* Image and header */}
-      <div className="md:flex mx-auto w-5/6 items-center justify-center md:h-5/6">
+      <motion.div
+        className="md:flex mx-auto w-5/6 items-center justify-center md:h-5/6"
+        onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
+      >
         {/* Main Header */}
         <div className="mt-32 z-10 md:basis-2/6">
           {/* Headings */}
@@ -78,12 +81,15 @@ const Home = ({ setSelectedPage }: Props) => {
         </div>
         {/* Hero Image */}
         <div className="flex justify-center basis-3/5 mt-16 md:z-10 md:mt-40 md:ml-32 md:justify-end">
+          {/* <span>
+            10+ <b>Years In Business</b>
+          </span> */}
           <img
             src={HomePageGraphic}
             alt="yoga women lillies"
           />
         </div>
-      </div>
+      </motion.div>
 
       {/* Sponsors - only show on desktop */}
       {isAboveMediumScreens && (

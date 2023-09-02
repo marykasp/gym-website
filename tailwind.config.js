@@ -8,6 +8,7 @@ export default {
         'gray-50': '#EFE6E6',
         'gray-100': '#DFCCCC',
         'gray-500': '#5E5E5E',
+        'primary-50': '#f6f7f2',
         'primary-100': '#EEEFE6',
         'primary-300': '#A9AF82',
         'primary-500': '#878C68',
