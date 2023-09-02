@@ -69,9 +69,9 @@ const Navbar = ({ selectedPage, setSelectedPage, isTopOfPage }: Props) => {
       {/* Mobile menuy modal */}
       {!isAboveMediumScreens && isMenuToggled && (
         <div className="fixed right-0 bottom-0 z-40 h-full w-[300px] bg-secondary-100 drop-shadow-xl">
-          <div className="flex justify-end p-12">
+          <div className="flex justify-end p-20">
             <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
-              <XMarkIcon className="h-6 w-6 text-gray-400" />
+              <XMarkIcon className="h-6 w-6 text-gray-500" />
             </button>
           </div>
           <div className="ml-[33%] flex flex-col gap-10 text-2xl">
