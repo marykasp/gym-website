@@ -1,16 +1,17 @@
 import { SelectedPage } from '../../shared/types';
 import useMediaQuery from '../../hooks/useMediaQuery';
 import ActionButton from '../ActionButton';
-import HomePageText from '@/assets/Headerbackgroundtext.png';
 import HomePageGraphic from '@/assets/yoga-hero-lillies.png';
 import SponsorRedBull from '@/assets/SponsorRedBull.png';
 import SponsorForbes from '@/assets/SponsorForbes.png';
 import SponsorFortune from '@/assets/SponsorFortune.png';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { motion } from 'framer-motion';
 
 type Props = {
   setSelectedPage: (page: SelectedPage) => void;
 };
+
 const Home = ({ setSelectedPage }: Props) => {
   const isAboveMediumScreens = useMediaQuery('(min-width: 1060px)');
 
@@ -24,7 +25,17 @@ const Home = ({ setSelectedPage }: Props) => {
         {/* Main Header */}
         <div className="mt-32 z-10 md:basis-2/6">
           {/* Headings */}
-          <div className="md:-mt-20">
+          <motion.div
+            className="md:-mt-20"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, x: -100 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
             <div className="relative">
               <div className="before:absolute before:-top-20 before:-left-20 before:z-[-1] md:before:content-evolvetext">
                 <h1 className="font-montserrat font-semibold text-8xl text-primary-500">
@@ -40,9 +51,19 @@ const Home = ({ setSelectedPage }: Props) => {
               delectus error similique quo tempora nobis quaerat perferendis
               cumque necessitatibus.
             </p>
-          </div>
+          </motion.div>
           {/* Actions */}
-          <div className="mt-8 flex items-center gap-8 md:justify-start">
+          <motion.div
+            className="mt-8 flex items-center gap-8 md:justify-start"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, x: -100 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
             <ActionButton setSelectedPage={setSelectedPage}>
               Join Now
             </ActionButton>
@@ -53,7 +74,7 @@ const Home = ({ setSelectedPage }: Props) => {
             >
               <p>Learn More</p>
             </AnchorLink>
-          </div>
+          </motion.div>
         </div>
         {/* Hero Image */}
         <div className="flex justify-center basis-3/5 mt-16 md:z-10 md:mt-40 md:ml-32 md:justify-end">
