@@ -50,14 +50,15 @@ const Benefits = ({ setSelectedPage }: Props) => {
   return (
     <section
       id="benefits"
-      className="relative mx-auto min-h-full w-5/6 py-20 md:pt-40 md:pb-10"
+      className="relative min-h-full py-20 md:pt-40 md:pb-10"
     >
       <motion.div
+        className="mx-auto w-5/6"
         onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}
       >
         {/* Section Headers */}
         <motion.div
-          className="md:my-5 mx-auto w-3/5"
+          className="md:my-5 mx-auto md:w-3/5"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}

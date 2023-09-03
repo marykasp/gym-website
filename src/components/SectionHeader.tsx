@@ -12,7 +12,7 @@ const SectionHeader = ({ children }: Props) => {
         src={Lotus}
         alt="Lotus flower icon"
       />
-      <h2 className="font-montserrat uppercase text-3xl font-bold text-center">
+      <h2 className="font-montserrat uppercase text-3xl font-bold">
         {children}
       </h2>
     </div>

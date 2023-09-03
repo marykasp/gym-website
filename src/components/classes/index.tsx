@@ -55,7 +55,7 @@ type Props = {
 const Classes = ({ setSelectedPage }: Props) => {
   return (
     <section
-      className="w-full bg-primary-100 py-40"
+      className="w-full bg-primary-100 py-32"
       id="classes"
     >
       {/* div with the set width of 5/6 */}
