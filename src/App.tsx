@@ -3,6 +3,7 @@ import Home from '@/components/home';
 import Benefits from '@/components/benefits';
 import { useEffect, useState } from 'react';
 import { SelectedPage } from '@/shared/types';
+import Footer from './components/footer';
 
 const App = () => {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -34,6 +35,7 @@ const App = () => {
       />
       <Home setSelectedPage={setSelectedPage} />
       <Benefits setSelectedPage={setSelectedPage} />
+      <Footer />
     </div>
   );
 };

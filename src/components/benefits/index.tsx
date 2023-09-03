@@ -96,16 +96,16 @@ const Benefits = ({ setSelectedPage }: Props) => {
         </motion.div>
         {/* Extra Information */}
 
-        <div className="md:flex items-center justify-between gap-10 mt-16 md:mt-28">
-          <div className="md:basis-4/5">
+        <div className="md:flex items-center justify-between gap-8 mt-16 md:mt-28">
+          <div className="md:basis-1/2">
             <img
-              className="mx-auto"
+              className="mx-auto md:mr-32"
               src={BenefitsPageGraphic}
               alt=""
             />
           </div>
           {/* Description */}
-          <div className="">
+          <div className="md:basis-1/2">
             <div className="relative">
               <div className="before:absolute before:-top-20 before:-left-20 before:content-abstractwaves">
                 <motion.div
@@ -164,7 +164,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
             </motion.div>
             {/* Action Button */}
             <div className="relative mt-16">
-              <div className="before:absolute before:-bottom-60 before:right-10  before:content-lotusflower">
+              <div className="before:absolute before:-top-20 before:-right-28  before:content-lotusflower">
                 <ActionButton setSelectedPage={setSelectedPage}>
                   Join Now
                 </ActionButton>
@@ -173,7 +173,6 @@ const Benefits = ({ setSelectedPage }: Props) => {
           </div>
         </div>
       </motion.div>
-      {/* <div className="before:absolute before:-top-30 before:-left-10 md:before:content-lotusflower"></div> */}
     </section>
   );
 };
