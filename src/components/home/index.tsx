@@ -18,7 +18,7 @@ const Home = ({ setSelectedPage }: Props) => {
   return (
     <section
       id="home"
-      className="gap-16 py-12 md:h-full md:pb-0"
+      className="gap-16 py-36 md:h-full md:pb-0"
     >
       {/* Image and header */}
       <motion.div
@@ -80,10 +80,13 @@ const Home = ({ setSelectedPage }: Props) => {
           </motion.div>
         </div>
         {/* Hero Image */}
-        <div className="flex justify-center basis-3/5 mt-16 md:z-10 md:mt-40 md:ml-32 md:justify-end">
-          {/* <span>
+        <div className="relative flex justify-center basis-3/5 mt-16 md:z-10 md:mt-40 md:ml-32 md:justify-end">
+          <div className="absolute bottom-28 right-96 rounded-full bg-secondary-500 px-4 py-2 text-white text-xs">
             10+ <b>Years In Business</b>
-          </span> */}
+          </div>
+          <div className="absolute -top-30 right-28 rounded-full bg-secondary-500 px-4 py-2 text-white text-xs">
+            30+ <b>Types of Classes</b>
+          </div>
           <img
             src={HomePageGraphic}
             alt="yoga women lillies"
@@ -93,7 +96,7 @@ const Home = ({ setSelectedPage }: Props) => {
 
       {/* Sponsors - only show on desktop */}
       {isAboveMediumScreens && (
-        <div className="h-[150px] w-full bg-gray-50 py-10">
+        <div className="h-[150px] w-full bg-gray-20 py-10">
           <div className="mx-auto w-5/6">
             <div className="flex w-3/5 items-center justify-between gap-8">
               <img
