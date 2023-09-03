@@ -50,14 +50,14 @@ const Benefits = ({ setSelectedPage }: Props) => {
   return (
     <section
       id="benefits"
-      className="relative mx-auto min-h-full w-5/6 py-20"
+      className="relative mx-auto min-h-full w-5/6 py-20 md:pt-40 md:pb-10"
     >
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}
       >
         {/* Section Headers */}
         <motion.div
-          className="md:my-5 flex flex-col items-center"
+          className="md:my-5 mx-auto w-3/5"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -68,7 +68,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
           }}
         >
           <SectionHeader>MORE THAN JUST A GYM.</SectionHeader>
-          <p className="my-5 text-lg md:text-normal md:w-3/5">
+          <p className="my-5 text-normal md:text-normal">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
             earum, architecto voluptatibus fugiat eos illo! Ratione, accusantium
             enim sed rerum dolore commodi numquam necessitatibus. Cupiditate

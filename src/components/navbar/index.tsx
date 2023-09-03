@@ -13,13 +13,14 @@ type Props = {
   setSelectedPage: (page: SelectedPage) => void;
 };
 
+const navigation = ['Home', 'Benefits', 'Classes', 'Contact us'];
+
 const Navbar = ({ selectedPage, setSelectedPage, isTopOfPage }: Props) => {
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   const isAboveMediumScreens = useMediaQuery('(min-width: 1060px)');
 
   const flexBetween = 'flex items-center justify-between';
   const navbarBackground = isTopOfPage ? '' : 'bg-white drop-shadow';
-  const navigation = ['Home', 'Benefits', 'Classes', 'Contact us'];
 
   return (
     <nav>

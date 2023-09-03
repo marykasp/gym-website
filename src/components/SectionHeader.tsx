@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import Lotus from '@/assets/lotus-flower.png';
 
 type Props = {
   children: ReactNode;
@@ -6,9 +7,15 @@ type Props = {
 
 const SectionHeader = ({ children }: Props) => {
   return (
-    <h2 className="basis-3/5 font-montserrat text-3xl font-bold text-center">
-      {children}
-    </h2>
+    <div className="flex flex-col items-center">
+      <img
+        src={Lotus}
+        alt="Lotus flower icon"
+      />
+      <h2 className="font-montserrat uppercase text-3xl font-bold text-center">
+        {children}
+      </h2>
+    </div>
   );
 };
 
